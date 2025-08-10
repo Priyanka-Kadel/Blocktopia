@@ -53,7 +53,6 @@ function init() {
   renderer.setAnimationLoop(animation);
   document.body.appendChild(renderer.domElement);
 
-  // Lights
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambientLight);
   const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
@@ -62,7 +61,6 @@ function init() {
 
   window.addEventListener("resize", onWindowResize);
 
-  // Input events
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("mousedown", onUserAction);
   window.addEventListener("touchstart", onUserAction);
@@ -92,7 +90,7 @@ function setRobotPrecision() {
   robotPrecision = Math.random() * 1 - 0.5;
 }
 
-// --- GAME CONTROL ---
+
 
 function startGame() {
   autopilot = false;
