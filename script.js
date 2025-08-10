@@ -309,11 +309,11 @@ function celebratePerfectAlignment(combo = 1) {
   const topLayer = stack[stack.length - 1];
   const mesh = topLayer.threejs;
 
-  // Play perfect sound
+
   perfectAudio.currentTime = 0;
   perfectAudio.play();
 
-  // Floating text with combo
+
   const loader = new THREE.FontLoader();
   loader.load("https://threejs.org/examples/fonts/helvetiker_bold.typeface.json", font => {
     const group = new THREE.Group();
@@ -358,7 +358,7 @@ function celebratePerfectAlignment(combo = 1) {
     fadeText();
   });
 
-  // Pulse animation stronger with combo count
+
   const originalColor = mesh.material.color.clone();
   const originalScale = mesh.scale.clone();
   let t = 0;
