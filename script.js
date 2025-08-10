@@ -14,13 +14,11 @@ const resultsElement = document.getElementById("results");
 const startBtn = document.getElementById("start-btn");
 const baseWidth = 14;
 
-// Load your custom perfect audio here (replace with your audio path)
 const perfectAudio = new Audio('assets/27DR015 2.m4a');
 perfectAudio.volume = 1;
 
 init();
 
-// --- INITIAL SETUP ---
 
 function init() {
   autopilot = false;
