@@ -105,12 +105,11 @@ function startGame() {
   if (welcomeScreen) welcomeScreen.style.display = "none";
   if (resultsElement) resultsElement.style.display = "none";
 
-  // Clean physics bodies
+
   while (world.bodies.length > 0) {
     world.remove(world.bodies[0]);
   }
 
-  // Clean scene meshes
   scene.children
     .filter(c => c.type === "Mesh" || c.type === "Group")
     .forEach(c => scene.remove(c));
@@ -138,7 +137,7 @@ function onKeyDown(event) {
   }
 }
 
-// --- CORE GAME LOGIC ---
+
 
 function addLayer(x, z, width, depth, direction) {
   const y = boxHeight * stack.length;
