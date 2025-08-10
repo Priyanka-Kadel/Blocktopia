@@ -286,7 +286,6 @@ function animation(time) {
     setRobotPrecision();
   }
 
-  // Smooth camera follow
   const targetY = boxHeight * (stack.length - 2) + 4;
   camera.position.y += (targetY - camera.position.y) * 0.1;
 
@@ -304,7 +303,7 @@ function updatePhysics(timePassed) {
   });
 }
 
-// --- PERFECT ALIGNMENT CELEBRATION ---
+
 
 function celebratePerfectAlignment(combo = 1) {
   const topLayer = stack[stack.length - 1];
