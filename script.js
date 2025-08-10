@@ -138,7 +138,6 @@ function onKeyDown(event) {
 }
 
 
-
 function addLayer(x, z, width, depth, direction) {
   const y = boxHeight * stack.length;
   const layer = generateBox(x, y, z, width, depth, false);
@@ -200,7 +199,7 @@ function splitBlockAndAddNextOneIfOverlaps() {
 
   let overhangSize = Math.abs(delta);
   const overlap = size - overhangSize;
-  const EPS = 0.03; // perfect tolerance
+  const EPS = 0.03;
 
   if (overlap > 0) {
     if (overhangSize <= EPS) {
@@ -251,7 +250,6 @@ function updateScore(score) {
   if (scoreElement) scoreElement.innerText = score;
 }
 
-// --- ANIMATION LOOP ---
 
 function animation(time) {
   if (!lastTime) {
@@ -269,7 +267,7 @@ function animation(time) {
   }
 
   const baseSpeed = 0.006;
-  const speed = baseSpeed + stack.length * 0.0001; // speed increases
+  const speed = baseSpeed + stack.length * 0.0001;
 
   const topLayer = stack[stack.length - 1];
   const previousLayer = stack[stack.length - 2];
