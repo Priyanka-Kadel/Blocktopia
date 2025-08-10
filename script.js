@@ -29,13 +29,11 @@ function init() {
   overhangs = [];
   setRobotPrecision();
 
-  // Physics world
   world = new CANNON.World();
   world.gravity.set(0, -10, 0);
   world.broadphase = new CANNON.NaiveBroadphase();
   world.solver.iterations = 40;
 
-  // Camera & scene
   const aspect = window.innerWidth / window.innerHeight;
   const height = baseWidth / aspect;
 
@@ -49,7 +47,6 @@ function init() {
 
   scene = new THREE.Scene();
 
-  // Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(new THREE.Color(0x000000)); // black
