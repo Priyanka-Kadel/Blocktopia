@@ -18,8 +18,6 @@ const perfectAudio = new Audio('assets/27DR015 2.m4a');
 perfectAudio.volume = 1;
 
 init();
-
-
 function init() {
   autopilot = false;
   gameEnded = false;
