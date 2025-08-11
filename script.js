@@ -66,10 +66,8 @@ function init() {
   startBtn.addEventListener("click", () => {
     startGame();
   });
-
   updateScore(0);
 }
-
 function onWindowResize() {
   const aspect = window.innerWidth / window.innerHeight;
   const height = baseWidth / aspect;
