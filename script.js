@@ -86,8 +86,6 @@ function setRobotPrecision() {
   robotPrecision = Math.random() * 1 - 0.5;
 }
 
-
-
 function startGame() {
   autopilot = false;
   gameEnded = false;
@@ -132,8 +130,6 @@ function onKeyDown(event) {
     startGame();
   }
 }
-
-
 function addLayer(x, z, width, depth, direction) {
   const y = boxHeight * stack.length;
   const layer = generateBox(x, y, z, width, depth, false);
@@ -298,8 +294,6 @@ function updatePhysics(timePassed) {
     el.threejs.quaternion.copy(el.cannonjs.quaternion);
   });
 }
-
-
 
 function celebratePerfectAlignment(combo = 1) {
   const topLayer = stack[stack.length - 1];
